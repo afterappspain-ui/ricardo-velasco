@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricardo Velasco Sedeño — Expediente profesional</title>
+<meta name="description" content="Business Intelligence, RevOps y automatización con IA. Siete proyectos en producción: producto, webs con tráfico real, automatizaciones y un dossier legal de 54 páginas. Málaga · remoto.">
+<meta name="author" content="Ricardo Daniel Velasco Sedeño">
+<meta name="theme-color" content="#f2ede4">
+<link rel="canonical" href="https://afterappspain-ui.github.io/ricardo-velasco/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ricardo Velasco Sedeño — Expediente profesional">
+<meta property="og:description" content="Construyo, lanzo y automatizo. Luego lo demuestro con números. Siete proyectos en producción.">
+<meta property="og:image" content="assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/InstrumentSerif-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/InstrumentSans-400-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Set the document language before first paint, so screen readers and
+     translation tools never see a stale lang="es" on an English browser.
+     main.js applies the full ES/EN content swap as soon as the DOM is parsed. -->
+<script>
+(function () {
+  try {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q === "es" || q === "en") { document.documentElement.lang = q; return; }
+    var s = localStorage.getItem("rv-lang");
+    if (s === "es" || s === "en") { document.documentElement.lang = s; return; }
+  } catch (e) {}
+  var l = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+  document.documentElement.lang = /^es(-|$)/i.test(l) ? "es" : "en";
+})();
+</script>
+<script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="top">
+  <div class="top__inner">
+    <a class="top__mark" href="#inicio" aria-label="Inicio">
+      <b>RV</b>
+      <span data-en="Case file&nbsp;/&nbsp;001">Expediente&nbsp;/&nbsp;001</span>
+    </a>
+
+    <nav class="top__nav" aria-label="Secciones">
+      <a href="#expedientes" data-en="Case files">Expedientes</a>
+      <a href="#encaje" data-en="Fit">Encaje</a>
+      <a href="#trayectoria" data-en="Track record">Trayectoria</a>
+      <a href="#metodo" data-en="Method">Método</a>
+    </nav>
+
+    <span class="top__clock" id="clock" aria-hidden="true">MÁLAGA —:—</span>
+
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <a class="top__cta" href="#contacto">
+      <span data-en="Get in touch">Contacto</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+
+    <div class="progress" id="progress"></div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== PORTADA ===================== -->
+  <section class="hero">
+    <div class="wrap">
+
+      <div class="hero__meta">
+        <span><i class="dot"></i><span data-en="Professional dossier · 2026">Expediente profesional · 2026</span></span>
+        <span data-en="Málaga, Spain">Málaga, España</span>
+        <span data-en="Business Intelligence · RevOps · AI automation">Business Intelligence · RevOps · Automatización con IA</span>
+        <span data-en="7 projects shipped">7 proyectos en producción</span>
+      </div>
+
+      <div class="hero__grid">
+        <div>
+          <h1 data-en="I build, launch and <em>automate</em>. Then I prove it with numbers.">Construyo, lanzo y <em>automatizo</em>. Luego lo demuestro con números.</h1>
+
+          <p class="hero__sub" data-en="Final-year double degree in Business Administration and Law. Seven projects in production: a social app, a games site pulling <strong>30,000 views a month</strong>, automations that publish on their own, and a 54-page legal dossier sold to a client. The pattern is always the same: find the manual work, remove it, measure it.">
+            Último curso del doble grado en ADE y Derecho. Siete proyectos en producción: una app social, una web de juegos con <strong>30.000 vistas al mes</strong>, automatizaciones que publican solas y un dossier legal de 54 páginas vendido a un cliente. El patrón siempre es el mismo: encontrar el trabajo manual, eliminarlo y medirlo.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#expedientes">
+              <span data-en="See the case files">Ver los expedientes</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contacto">
+              <span data-en="Write to me">Escríbeme</span>
+            </a>
+          </div>
+
+          <p class="hero__note" data-en="Remote-first · full-time available · Spanish native · English B2/C1 · French B2">
+            Remoto prioritario · jornada completa · español nativo · inglés B2/C1 · francés B2
+          </p>
+        </div>
+
+        <!-- Ficha / carné -->
+        <aside class="ficha reveal" aria-label="Ficha del candidato">
+          <div class="ficha__top">
+            <span data-en="Candidate record">Ficha del candidato</span>
+            <span>Nº 001</span>
+          </div>
+          <div class="ficha__photo">
+            <img src="assets/img/retrato.webp" alt="Retrato de Ricardo Velasco Sedeño" width="460" height="460">
+          </div>
+          <dl class="ficha__rows">
+            <div class="ficha__row">
+              <dt data-en="Name">Nombre</dt>
+              <dd>Ricardo D. Velasco Sedeño</dd>
+            </div>
+            <div class="ficha__row">
+              <dt data-en="Role">Rol</dt>
+              <dd data-en="BI · RevOps · AI automation">BI · RevOps · Automatización IA</dd>
+            </div>
+            <div class="ficha__row">
+              <dt data-en="Base">Base</dt>
+              <dd data-en="Málaga (ES) · remote">Málaga (ES) · remoto</dd>
+            </div>
+            <div class="ficha__row">
+              <dt data-en="Studies">Estudios</dt>
+              <dd data-en="Business Administration + Law, UMA (2027)">ADE + Derecho, UMA (2027)</dd>
+            </div>
+            <div class="ficha__row">
+              <dt data-en="Status">Estado</dt>
+              <dd data-en="Available · full-time">Disponible · jornada completa</dd>
+            </div>
+          </dl>
+          <div class="ficha__code" aria-hidden="true">
+            <i style="height:16px"></i><i style="height:24px"></i><i style="height:10px"></i><i style="height:20px"></i><i style="height:14px"></i><i style="height:26px"></i><i style="height:8px"></i><i style="height:22px"></i><i style="height:18px"></i><i style="height:12px"></i><i style="height:24px"></i><i style="height:16px"></i><i style="height:9px"></i><i style="height:21px"></i><i style="height:13px"></i><i style="height:25px"></i><i style="height:11px"></i><i style="height:19px"></i><i style="height:15px"></i><i style="height:23px"></i><i style="height:10px"></i><i style="height:17px"></i>
+          </div>
+          <span class="ficha__stamp" data-en="Available">Disponible</span>
+        </aside>
+      </div>
+
+      <!-- Métricas -->
+      <div class="stats">
+        <div class="stat reveal">
+          <div class="stat__val">30.000<small data-en="views">vistas</small></div>
+          <p class="stat__cap" data-en="in under a month, from zero, on a site I built alone">en menos de un mes, desde cero, en una web que hice yo</p>
+        </div>
+        <div class="stat reveal" data-d="1">
+          <div class="stat__val">327<small data-en="people">personas</small></div>
+          <p class="stat__cap" data-en="on the launch waitlist, acquired one by one">en lista de espera, captadas una a una</p>
+        </div>
+        <div class="stat reveal" data-d="2">
+          <div class="stat__val">1<small data-en="month → 1 day">mes → 1 día</small></div>
+          <p class="stat__cap" data-en="what an AI agent cut from a weekly task at Heineken">lo que un agente de IA recortó a una tarea semanal en Heineken</p>
+        </div>
+        <div class="stat reveal" data-d="3">
+          <div class="stat__val">7<small data-en="live">en vivo</small></div>
+          <p class="stat__cap" data-en="projects built, launched and maintained by me">proyectos construidos, lanzados y mantenidos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÍNDICE ===================== -->
+  <nav class="indice" aria-label="Índice">
+    <div class="wrap">
+      <div class="indice__grid">
+        <a class="indice__item" href="#expedientes">
+          <span class="indice__n">01</span>
+          <span class="indice__t" data-en="Case files">Expedientes</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">001—004</span>
+        </a>
+        <a class="indice__item" href="#anexos">
+          <span class="indice__n">02</span>
+          <span class="indice__t" data-en="Annexes">Anexos</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">005—008</span>
+        </a>
+        <a class="indice__item" href="#encaje">
+          <span class="indice__n">03</span>
+          <span class="indice__t" data-en="What jobs ask for">Lo que piden las ofertas</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">09</span>
+        </a>
+        <a class="indice__item" href="#trayectoria">
+          <span class="indice__n">04</span>
+          <span class="indice__t" data-en="Track record">Trayectoria</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">05</span>
+        </a>
+        <a class="indice__item" href="#metodo">
+          <span class="indice__n">05</span>
+          <span class="indice__t" data-en="How I work">Cómo trabajo</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">04</span>
+        </a>
+        <a class="indice__item" href="#contacto">
+          <span class="indice__n">06</span>
+          <span class="indice__t" data-en="Contact">Contacto</span>
+          <span class="indice__lead"></span>
+          <span class="indice__p">→</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== EXPEDIENTES ===================== -->
+  <section class="section" id="expedientes">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">01</span>
+        <div>
+          <p class="label label--accent" data-en="Case files 001—004">Expedientes 001—004</p>
+          <h2 class="sec-head__title" data-en="Real work, with <em>numbers</em> attached">Trabajo real, con <em>números</em> detrás</h2>
+          <p class="sec-head__note" data-en="Four projects where I owned the whole thing: the idea, the build, the launch and the metric. Each file opens with the problem, ends with what it produced.">
+            Cuatro proyectos donde llevé todo el ciclo: la idea, la construcción, el lanzamiento y la métrica. Cada expediente abre con el problema y cierra con lo que produjo.
+          </p>
+        </div>
+      </header>
+
+      <div class="cases">
+
+        <!-- ---------- 001 AFTER ---------- -->
+        <article class="case reveal" id="after">
+          <div class="case__head">
+            <span class="case__num">EXP. 001</span>
+            <h3 class="case__title"><a href="https://afterspain.vercel.app" target="_blank" rel="noopener">After</a></h3>
+            <div class="case__tags">
+              <span class="tag tag--accent" data-en="Product">Producto</span>
+              <span class="tag" data-en="Social">Social</span>
+              <span class="tag" data-en="Launch">Lanzamiento</span>
+            </div>
+          </div>
+
+          <p class="case__thesis" data-en="An app to know who is going out tonight in Málaga. From zero to <em>327 people</em> on a waitlist, with no ad budget.">
+            Una app para saber quién sale esta noche en Málaga. De cero a <em>327 personas</em> en lista de espera, sin presupuesto de publicidad.
+          </p>
+
+          <div class="case__grid">
+            <div class="case__body">
+              <p data-en="The problem was social, not technical: nobody knows where the people their age are going tonight. After solves it with a live list of clubs by area and music, a join counter that shows how many people are already in, chats and icebreaker challenges, and points that reward showing up.">
+                El problema era social, no técnico: nadie sabe dónde va esta noche la gente de su edad. After lo resuelve con una lista viva de discotecas por zona y música, un contador de apuntados en tiempo real, chats y retos para romper el hielo, y puntos que premian aparecer.
+              </p>
+              <ul class="case__list">
+                <li><span data-en="<b>Product:</b> discovery by area and genre, one-tap join, live attendance counter, chats and profile."><b>Producto:</b> descubrimiento por zona y género musical, «unirme» en un toque, contador de apuntados en vivo, chats y perfil.</span></li>
+                <li><span data-en="<b>Go-to-market:</b> own waitlist built with direct, one-to-one outreach in the local scene before opening the doors."><b>Salida al mercado:</b> lista de espera propia construida con contacto directo, uno a uno, en la escena local antes de abrir.</span></li>
+                <li><span data-en="<b>My role:</b> Gabriel and I built it inside VIBA — product, development, launch, venue partnerships and commercial operation."><b>Mi rol:</b> lo construimos Gabriel y yo dentro de VIBA — producto, desarrollo, lanzamiento, alianzas con locales y operación comercial.</span></li>
+              </ul>
+            </div>
+
+            <figure class="exhibit exhibit--tilt">
+              <div class="exhibit__frame">
+                <img src="assets/img/after-app.webp" alt="Pantalla de After con el listado de discotecas y el contador de apuntados" loading="lazy" width="720" height="920">
+              </div>
+              <figcaption><b>FIG. 001</b> <span data-en="Club feed: live attendance counter and one-tap join.">Feed de discotecas: contador de apuntados en vivo y «unirme» en un toque.</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="case__metrics">
+            <div class="case__metric"><b>327</b><span data-en="waitlist">lista de espera</span></div>
+            <div class="case__metric"><b>1 OCT</b><span data-en="launch 2026">lanzamiento 2026</span></div>
+            <div class="case__metric"><b>3</b><span data-en="clubs live">discotecas activas</span></div>
+            <div class="case__metric"><b>1:1</b><span data-en="acquisition">captación manual</span></div>
+          </div>
+
+          <div class="case__foot">
+            <div class="stack"><span>Next.js</span><span>React</span><span>Vercel</span><span data-en="Realtime">Tiempo real</span></div>
+            <div class="links">
+              <a href="https://afterspain.vercel.app" target="_blank" rel="noopener">
+                <span data-en="Open app">Abrir la app</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- 002 KLIK ---------- -->
+        <article class="case case--flip reveal" id="klik">
+          <div class="case__head">
+            <span class="case__num">EXP. 002</span>
+            <h3 class="case__title"><a href="https://klik-ruby.vercel.app/" target="_blank" rel="noopener">Klik</a></h3>
+            <div class="case__tags">
+              <span class="tag tag--accent" data-en="Traffic">Tráfico</span>
+              <span class="tag" data-en="SEO">SEO</span>
+              <span class="tag" data-en="Monetisation">Monetización</span>
+            </div>
+          </div>
+
+          <p class="case__thesis" data-en="An arcade of <em>58 games</em> playable in the browser. In under a month: 30,000 views and 6,200 active users. Monetised from day one.">
+            Un arcade de <em>58 juegos</em> jugables en el navegador. En menos de un mes: 30.000 vistas y 6.200 usuarios activos. Monetizado desde el primer día.
+          </p>
+
+          <div class="case__grid">
+            <div class="case__body">
+              <p data-en="This is the project that taught me the most about distribution. Building the catalogue was the easy half; getting strangers to arrive, stay and come back was the real work.">
+                Este es el proyecto que más me ha enseñado sobre distribución. Montar el catálogo era la mitad fácil; conseguir que llegara gente desconocida, se quedara y volviera era el trabajo de verdad.
+              </p>
+              <ul class="case__list">
+                <li><span data-en="<b>Catalogue:</b> 58 titles tagged by genre, with READY / TRY states, search and a bilingual interface."><b>Catálogo:</b> 58 títulos etiquetados por género, con estados READY / TRY, buscador e interfaz bilingüe.</span></li>
+                <li><span data-en="<b>Growth:</b> URL architecture per language and per game, one landing per title and content built around what people actually search for."><b>Crecimiento:</b> arquitectura de URLs por idioma y por juego, una landing por título y contenido construido sobre lo que la gente busca de verdad.</span></li>
+                <li><span data-en="<b>Revenue:</b> advertising plus a cookie-consent layer from the start, not bolted on later."><b>Ingresos:</b> publicidad y capa de consentimiento de cookies desde el principio, no pegada después.</span></li>
+              </ul>
+              <p class="marginal" data-en="<b>Note:</b> the traffic spike in the chart is not a launch — it is indexing. Search engines found the catalogue before users did.">
+                <b>Nota:</b> el pico del gráfico no es un lanzamiento, es indexación. Los buscadores encontraron el catálogo antes que los usuarios.
+              </p>
+            </div>
+
+            <div class="exhibit exhibit--pair">
+              <figure class="exhibit">
+                <div class="exhibit__frame">
+                  <img src="assets/img/klik.webp" alt="Portada de Klik con el catálogo de juegos" loading="lazy" width="1200" height="833">
+                </div>
+                <figcaption><b>FIG. 002</b> <span data-en="Home: featured game, genre filters and 58-title catalogue.">Portada: juego destacado, filtros por género y catálogo de 58 títulos.</span></figcaption>
+              </figure>
+              <figure class="exhibit">
+                <div class="exhibit__frame">
+                  <img src="assets/img/analytics.webp" alt="Panel de analítica con 6,2 mil usuarios activos y 30 mil vistas" loading="lazy" width="526" height="447">
+                </div>
+                <figcaption><b>FIG. 003</b> <span data-en="Analytics panel: 6.2k active users, 30k views.">Panel de analítica: 6,2 mil usuarios activos, 30 mil vistas.</span></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="case__metrics">
+            <div class="case__metric"><b>30.000</b><span data-en="views">vistas</span></div>
+            <div class="case__metric"><b>6.200</b><span data-en="active users">usuarios activos</span></div>
+            <div class="case__metric"><b>58</b><span data-en="games">juegos</span></div>
+            <div class="case__metric"><b>&lt;30</b><span data-en="days">días</span></div>
+          </div>
+
+          <div class="case__foot">
+            <div class="stack"><span>Next.js</span><span>Vercel</span><span data-en="Technical SEO">SEO técnico</span><span data-en="Ads">Publicidad</span></div>
+            <div class="links">
+              <a href="https://klik-ruby.vercel.app/" target="_blank" rel="noopener">
+                <span data-en="Open Klik">Abrir Klik</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- 003 TIZEN ---------- -->
+        <article class="case reveal" id="tizen">
+          <div class="case__head">
+            <span class="case__num">EXP. 003</span>
+            <h3 class="case__title"><span data-en="Launcher for a dead TV">Launcher para una tele muerta</span></h3>
+            <div class="case__tags">
+              <span class="tag tag--accent" data-en="Engineering">Ingeniería</span>
+              <span class="tag" data-en="Reverse engineering">Ingeniería inversa</span>
+              <span class="tag">Tizen 2.3</span>
+            </div>
+          </div>
+
+          <p class="case__thesis" data-en="A 2015 Samsung TV that the manufacturer stopped updating. I put my own launcher and an IPTV app inside it: signed, installed and running.">
+            Una Smart TV de 2015 que Samsung dejó de actualizar. Le metí un launcher propio y una app de IPTV: firmados, instalados y funcionando.
+          </p>
+
+          <div class="case__grid">
+            <div class="case__body">
+              <p data-en="No SDK documentation covers a TV this old. So the process was: read the firmware, find what the device allows, and build around the restrictions instead of fighting them.">
+                Ninguna documentación del SDK cubre una tele tan vieja. Así que el proceso fue: leer el firmware, averiguar qué permite el aparato y construir alrededor de las restricciones en vez de pelearse con ellas.
+              </p>
+              <ul class="case__list">
+                <li><span data-en="<b>Own launcher («Inicio», v1.2.0):</b> packaged and signed as a .wgt, installed and verified over SDB on a UE32J6300 running Tizen 2.3."><b>Launcher propio («Inicio», v1.2.0):</b> empaquetado y firmado como .wgt, instalado y verificado por SDB en un UE32J6300 con Tizen 2.3.</span></li>
+                <li><span data-en="<b>The discovery:</b> the generic shell is whitelisted, so I found the local API on port 8001 and now open Netflix and YouTube with a POST request."><b>El hallazgo:</b> el shell genérico está en lista blanca, así que encontré la API local en el puerto 8001 y ahora abro Netflix y YouTube con una petición POST.</span></li>
+                <li><span data-en="<b>TV app:</b> Spanish IPTV channels, category list, zapping and remote control, built on the AVPlay player."><b>App de TV:</b> canales españoles por IPTV, lista por categorías, zapping y mando, sobre el reproductor AVPlay.</span></li>
+              </ul>
+              <p class="marginal" data-en="<b>Why it matters:</b> zero budget, zero new hardware. A TV that was going to be replaced now does more than when it was bought.">
+                <b>Por qué importa:</b> cero presupuesto y cero hardware nuevo. Una tele que iba a ser reemplazada ahora hace más que cuando se compró.
+              </p>
+            </div>
+
+            <figure class="exhibit">
+              <div class="exhibit__frame diagram">
+                <svg viewBox="0 0 660 300" role="img" aria-label="Diagrama de la arquitectura: PC con Tizen Studio y SDB, televisor Samsung con launcher y app de IPTV, API local en el puerto 8001">
+                  <g font-family="JetBrains Mono, monospace" fill="#17130f">
+                    <!-- PC -->
+                    <rect x="6" y="92" width="150" height="78" fill="none" stroke="#17130f" stroke-width="1"/>
+                    <text x="18" y="112" font-size="8" letter-spacing="1.4" fill="#8a8378">01 / PC</text>
+                    <text x="18" y="130" font-size="10" font-weight="700">Tizen Studio</text>
+                    <text x="18" y="145" font-size="9" fill="#5b544b">sdb · certificados</text>
+                    <text x="18" y="160" font-size="9" fill="#5b544b">.wgt firmado</text>
+
+                    <!-- flecha SDB -->
+                    <line x1="156" y1="131" x2="244" y2="131" stroke="#b8391a" stroke-width="1"/>
+                    <path d="M244 131l-7 -3.5v7z" fill="#b8391a"/>
+                    <text x="163" y="124" font-size="8" letter-spacing="1" fill="#b8391a">SDB :26101</text>
+
+                    <!-- TV -->
+                    <rect x="252" y="14" width="400" height="272" fill="none" stroke="#17130f" stroke-width="1" stroke-dasharray="3 3"/>
+                    <text x="266" y="34" font-size="8" letter-spacing="1.4" fill="#8a8378">02 / TELEVISOR · SAMSUNG UE32J6300 · TIZEN 2.3</text>
+
+                    <!-- Launcher -->
+                    <rect x="270" y="52" width="168" height="72" fill="#f8f4ec" stroke="#17130f" stroke-width="1"/>
+                    <text x="282" y="70" font-size="8" letter-spacing="1.2" fill="#b8391a">LAUNCHER</text>
+                    <text x="282" y="88" font-size="13" font-family="Instrument Serif, serif">«Inicio»</text>
+                    <text x="282" y="104" font-size="8.5" fill="#5b544b">v1.2.0 · instalado ✓</text>
+
+                    <!-- App TV -->
+                    <rect x="464" y="52" width="168" height="72" fill="#f8f4ec" stroke="#17130f" stroke-width="1"/>
+                    <text x="476" y="70" font-size="8" letter-spacing="1.2" fill="#b8391a">APP</text>
+                    <text x="476" y="88" font-size="13" font-family="Instrument Serif, serif">TV · IPTV</text>
+                    <text x="476" y="104" font-size="8.5" fill="#5b544b">AVPlay · zapping</text>
+
+                    <!-- API -->
+                    <rect x="270" y="182" width="362" height="62" fill="#f8f4ec" stroke="#17130f" stroke-width="1"/>
+                    <text x="282" y="200" font-size="8" letter-spacing="1.2" fill="#b8391a">API LOCAL · PUERTO 8001</text>
+                    <text x="282" y="218" font-size="9.5">POST /api/v2/applications/&lt;appId&gt;</text>
+                    <text x="282" y="233" font-size="8.5" fill="#5b544b">→ abre Netflix y YouTube desde el mando</text>
+
+                    <!-- flechas hacia arriba -->
+                    <line x1="354" y1="182" x2="354" y2="130" stroke="#17130f" stroke-width="1"/>
+                    <path d="M354 124l-3.5 7h7z" fill="#17130f"/>
+                    <line x1="548" y1="182" x2="548" y2="130" stroke="#17130f" stroke-width="1"/>
+                    <path d="M548 124l-3.5 7h7z" fill="#17130f"/>
+
+                    <!-- pie -->
+                    <text x="270" y="268" font-size="8" letter-spacing="0.8" fill="#8a8378">install completed · cmd_ret: 0 · 0 € de hardware</text>
+                  </g>
+                </svg>
+              </div>
+              <figcaption><b>FIG. 004</b> <span data-en="Architecture actually running on the TV: signing, install and local API.">Arquitectura real funcionando en la tele: firma, instalación y API local.</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="case__metrics">
+            <div class="case__metric"><b>2</b><span data-en="signed apps">apps firmadas</span></div>
+            <div class="case__metric"><b>v1.2.0</b><span data-en="launcher">launcher</span></div>
+            <div class="case__metric"><b>0 €</b><span data-en="hardware">hardware</span></div>
+            <div class="case__metric"><b>100 %</b><span data-en="built end to end">de cero a fin</span></div>
+          </div>
+
+          <div class="case__foot">
+            <div class="stack"><span>Tizen Studio</span><span>JavaScript</span><span>WGT / SDB</span><span>AVPlay</span></div>
+            <div class="links">
+              <a href="#contacto"><span data-en="Demo on request">Demo bajo petición</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- 004 MAKE ---------- -->
+        <article class="case case--flip reveal" id="make">
+          <div class="case__head">
+            <span class="case__num">EXP. 004</span>
+            <h3 class="case__title"><span data-en="Content pipeline">Fábrica de contenido</span></h3>
+            <div class="case__tags">
+              <span class="tag tag--accent" data-en="Automation">Automatización</span>
+              <span class="tag" data-en="AI">IA</span>
+              <span class="tag">Make</span>
+            </div>
+          </div>
+
+          <p class="case__thesis" data-en="A Make scenario that writes the script, generates the video, schedules it and publishes to TikTok on its own. <em>Nobody touches it.</em>">
+            Un escenario de Make que escribe el guion, genera el vídeo, lo programa y lo publica en TikTok solo. <em>Nadie lo toca.</em>
+          </p>
+
+          <div class="case__grid">
+            <div class="case__body">
+              <p data-en="Promoting a project by hand means writing, editing and posting every day. That is exactly the kind of repetitive work I refuse to do, so I turned it into a flow that runs without me.">
+                Promocionar un proyecto a mano significa escribir, editar y publicar todos los días. Es justo el tipo de trabajo repetitivo que me niego a hacer, así que lo convertí en un flujo que corre sin mí.
+              </p>
+              <ul class="case__list">
+                <li><span data-en="<b>Trigger:</b> a new row in a spreadsheet is the brief. No new row, no content."><b>Disparador:</b> una fila nueva en la hoja de cálculo es el brief. Sin fila nueva, no hay contenido.</span></li>
+                <li><span data-en="<b>Generation:</b> Gemini writes the script, then an HTTP call requests the video from the generator."><b>Generación:</b> Gemini escribe el guion y una llamada HTTP pide el vídeo al generador.</span></li>
+                <li><span data-en="<b>Delivery and record:</b> a Telegram bot reports back and the sheet is updated with the result, so the whole run is traceable."><b>Aviso y registro:</b> un bot de Telegram informa y la hoja se actualiza con el resultado, así cada ejecución queda trazada.</span></li>
+              </ul>
+              <p class="marginal" data-en="<b>Principle:</b> if a task repeats three times, it becomes a flow. That rule is why I can run seven projects while studying.">
+                <b>Principio:</b> si una tarea se repite tres veces, se convierte en flujo. Esa regla es la razón de poder llevar siete proyectos mientras estudio.
+              </p>
+            </div>
+
+            <figure class="exhibit exhibit--tilt">
+              <div class="exhibit__frame">
+                <img src="assets/img/make-scenario.webp" alt="Escenario de Make con Google Sheets, Gemini, HTTP, Telegram y Google Sheets" loading="lazy" width="898" height="520">
+              </div>
+              <figcaption><b>FIG. 005</b> <span data-en="Live scenario: Sheets → Gemini → HTTP → Telegram → Sheets.">Escenario en producción: Sheets → Gemini → HTTP → Telegram → Sheets.</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="case__metrics">
+            <div class="case__metric"><b>5</b><span data-en="modules">módulos</span></div>
+            <div class="case__metric"><b>0</b><span data-en="manual steps">pasos manuales</span></div>
+            <div class="case__metric"><b>1</b><span data-en="Telegram alert">aviso Telegram</span></div>
+            <div class="case__metric"><b>24/7</b><span data-en="uptime">en marcha</span></div>
+          </div>
+
+          <div class="case__foot">
+            <div class="stack"><span>Make</span><span>Gemini API</span><span>HTTP</span><span>Telegram Bot</span><span>Google Sheets</span><span>TikTok</span></div>
+            <div class="links">
+              <a href="#contacto"><span data-en="Walkthrough on request">Explicación bajo petición</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PLANTILLA PARA UN EXPEDIENTE NUEVO
+             ==================================================================
+             1. Copia todo el bloque <article> de abajo y pégalo justo aquí encima.
+             2. Cambia EXP. 005 por el número que toque y pon el título.
+             3. Rellena la tesis: una frase, con una cifra en <em> y el resultado.
+             4. Tres bullets: qué es / cómo creció / cuál fue tu papel.
+             5. Tres o cuatro métricas. Sin métrica no hay expediente.
+             6. Guarda la captura en assets/img/ (1400 px de ancho) y ajusta el src.
+             7. Actualiza los índices: indice__p, "Expedientes 001—00X" y el
+                contador "7 proyectos" de la portada.
+             Para un proyecto pequeño, usa una tarjeta .anexo en su lugar.
+
+        <article class="case reveal" id="nombre-corto">
+          <div class="case__head">
+            <span class="case__num">EXP. 005</span>
+            <h3 class="case__title"><a href="https://enlace-al-proyecto.com" target="_blank" rel="noopener">Nombre</a></h3>
+            <div class="case__tags">
+              <span class="tag tag--accent" data-en="Category">Categoría</span>
+              <span class="tag" data-en="Discipline">Disciplina</span>
+            </div>
+          </div>
+
+          <p class="case__thesis" data-en="One sentence with the result inside, and <em>one figure</em> in italics.">
+            Una frase con el resultado dentro y <em>una cifra</em> en cursiva.
+          </p>
+
+          <div class="case__grid">
+            <div class="case__body">
+              <p data-en="What the problem was and why it mattered. Two lines maximum.">
+                Cuál era el problema y por qué importaba. Dos líneas como máximo.
+              </p>
+              <ul class="case__list">
+                <li><span data-en="<b>What it is:</b> the product in one line."><b>Qué es:</b> el producto en una línea.</span></li>
+                <li><span data-en="<b>How it grew:</b> the distribution or automation angle."><b>Cómo creció:</b> la palanca de distribución o automatización.</span></li>
+                <li><span data-en="<b>My role:</b> what exactly you did, without inflating it."><b>Mi rol:</b> qué hiciste exactamente, sin inflarlo.</span></li>
+              </ul>
+            </div>
+
+            <figure class="exhibit exhibit--tilt">
+              <div class="exhibit__frame">
+                <img src="assets/img/CAPTURA.webp" alt="DESCRIPCIÓN DE LA IMAGEN" loading="lazy" width="1200" height="800">
+              </div>
+              <figcaption><b>FIG. 006</b> <span data-en="Caption: what the screenshot proves.">Pie: qué demuestra la captura.</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="case__metrics">
+            <div class="case__metric"><b>000</b><span data-en="metric">métrica</span></div>
+            <div class="case__metric"><b>000</b><span data-en="metric">métrica</span></div>
+            <div class="case__metric"><b>000</b><span data-en="metric">métrica</span></div>
+          </div>
+
+          <div class="case__foot">
+            <div class="stack"><span>Herramienta</span><span>Herramienta</span></div>
+            <div class="links">
+              <a href="https://enlace-al-proyecto.com" target="_blank" rel="noopener">
+                <span data-en="Open project">Abrir proyecto</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+             ================================================================== -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ANEXOS ===================== -->
+  <section class="section" id="anexos">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">02</span>
+        <div>
+          <p class="label label--accent" data-en="Annexes 005—008">Anexos 005—008</p>
+          <h2 class="sec-head__title" data-en="The rest of the <em>file</em>">El resto del <em>archivo</em></h2>
+          <p class="sec-head__note" data-en="Smaller pieces that still say something: an agency, a scraper, a legal dossier and one slot kept open for what comes next.">
+            Piezas más pequeñas que también dicen algo: una agencia, un scraper, un dossier legal y un hueco reservado para lo que viene.
+          </p>
+        </div>
+      </header>
+
+      <div class="anexos reveal">
+        <a class="anexo" href="https://viba-agency.vercel.app/" target="_blank" rel="noopener">
+          <div class="anexo__top">
+            <span class="anexo__n">005</span>
+            <span class="anexo__k" data-en="Agency · brand">Agencia · marca</span>
+          </div>
+          <h3>Viba Agency</h3>
+          <p data-en="Site, brand and operations for the influencer agency I co-founded: I built it from scratch, from the identity to brand negotiation and contract review.">
+            Web, marca y operación de la agencia que cofundé: la construí de cero, desde la identidad hasta la negociación con marcas y la revisión de cada contrato.
+          </p>
+          <div class="anexo__m"><b>24 <span data-en="brands">marcas</span></b><b>2M <span data-en="reach">alcance</span></b></div>
+        </a>
+
+        <div class="anexo">
+          <div class="anexo__top">
+            <span class="anexo__n">006</span>
+            <span class="anexo__k" data-en="Python · data">Python · datos</span>
+          </div>
+          <h3 data-en="Lead engine">Motor de leads</h3>
+          <p data-en="A Python script that crawls RSS, Lemmy and YouTube comments, deduplicates what it has already seen and serves a daily digest. Prospecting without twenty open tabs.">
+            Script en Python que rastrea RSS, Lemmy y comentarios de YouTube, deduplica lo ya visto y sirve un digest diario. Prospección sin abrir veinte pestañas.
+          </p>
+          <div class="anexo__m"><b>3 <span data-en="sources">fuentes</span></b><b data-en="auto-dedupe">dedupe auto</b></div>
+        </div>
+
+        <a class="anexo" href="assets/docs/Portfolio_Legal_Dossier_Sample.pdf" target="_blank" rel="noopener">
+          <div class="anexo__top">
+            <span class="anexo__n">007</span>
+            <span class="anexo__k" data-en="Legal · compliance">Legal · compliance</span>
+          </div>
+          <h3 data-en="Legal dossier">Dossier legal</h3>
+          <p data-en="54 pages, six bilingual ES/EN documents: terms, privacy, legal notice, DSA moderation policy, feasibility report and a pre-launch checklist. My first paid contract on Fiverr.">
+            54 páginas y seis documentos bilingües ES/EN: términos, privacidad, aviso legal, política de moderación DSA, informe de viabilidad y checklist de lanzamiento. Mi primer contrato cobrado en Fiverr.
+          </p>
+          <div class="anexo__m"><b>54 <span data-en="pages">pág.</span></b><b>350 $</b></div>
+        </a>
+
+        <!-- HUECO RESERVADO: aquí entra el próximo proyecto -->
+        <div class="anexo anexo--empty">
+          <div class="anexo__top">
+            <span class="anexo__n">008</span>
+            <span class="anexo__k" data-en="Reserved">Reservado</span>
+          </div>
+          <h3 data-en="Next case file">Próximo expediente</h3>
+          <p data-en="Slot kept open. A project is being built right now; when it ships, it goes here with its metric and its exhibit.">
+            Hueco libre. Hay un proyecto en construcción; cuando salga, entra aquí con su métrica y su prueba.
+          </p>
+          <div class="anexo__m"><b>—</b><b data-en="in progress">en preparación</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ENCAJE ===================== -->
+  <section class="section" id="encaje">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">03</span>
+        <div>
+          <p class="label label--accent" data-en="Fit · requirement by requirement">Encaje · requisito por requisito</p>
+          <h2 class="sec-head__title" data-en="What the jobs ask for, and where the <em>proof</em> is">Lo que piden las ofertas, y dónde está la <em>prueba</em></h2>
+          <p class="sec-head__note" data-en="I read the postings I am targeting — RevOps, BI, AI automation, legal-tech — and sorted the evidence by requirement. No adjectives: every row points to a file.">
+            He leído las ofertas que persigo — RevOps, BI, automatización con IA, legal-tech — y he ordenado la evidencia por requisito. Sin adjetivos: cada fila apunta a un expediente.
+          </p>
+        </div>
+      </header>
+
+      <div class="fit reveal">
+        <div class="fit__row">
+          <div class="fit__req" data-en="Process automation and AI agents">Automatización de procesos y agentes de IA</div>
+          <div class="fit__ev" data-en="A route-planning agent in Power Platform: a task that took about a month now takes about a day. Adopted by the whole team.">
+            Agente de planificación de rutas en Power Platform: una tarea de ~1 mes pasó a ~1 día. Adoptado por todo el equipo.
+          </div>
+          <div class="fit__ref">HEINEKEN</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="BI and dashboards">BI y cuadros de mando</div>
+          <div class="fit__ev" data-en="Daily sales reporting and a weekly Schweppes dashboard (~20 products) in Power BI, built for the regional managers.">
+            Reporting diario de ventas y cuadro de mando semanal de Schweppes (~20 productos) en Power BI, para los jefes regionales.
+          </div>
+          <div class="fit__ref">HEINEKEN</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="RevOps and data quality">RevOps y calidad del dato</div>
+          <div class="fit__ev" data-en="SAP/ERP reconciliation and a depreciation audit: top 20 deviations detected, some in the hundreds of thousands.">
+            Conciliación SAP/ERP y auditoría de amortizaciones: top 20 desviaciones detectadas, algunas de cientos de miles.
+          </div>
+          <div class="fit__ref">HEINEKEN</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Product from zero to one">Producto de cero a uno</div>
+          <div class="fit__ev" data-en="After: 327 people on a waitlist built by hand and a launch on 1 October 2026.">
+            After: 327 personas en una lista de espera construida a mano y lanzamiento el 1 de octubre de 2026.
+          </div>
+          <div class="fit__ref">EXP. 001</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Growth, SEO and monetisation">Growth, SEO y monetización</div>
+          <div class="fit__ev" data-en="Klik: 30,000 views and 6,200 active users in under a month, with ads live from day one.">
+            Klik: 30.000 vistas y 6.200 usuarios activos en menos de un mes, con publicidad activa desde el primer día.
+          </div>
+          <div class="fit__ref">EXP. 002</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Applied AI, not theory">IA aplicada, no teoría</div>
+          <div class="fit__ev" data-en="A Gemini + Make pipeline that publishes to TikTok with no human in the loop, with Telegram reporting.">
+            Pipeline de Gemini + Make que publica en TikTok sin intervención humana, con aviso por Telegram.
+          </div>
+          <div class="fit__ref">EXP. 004</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Legal-tech and compliance">Legal-tech y compliance</div>
+          <div class="fit__ev" data-en="A 54-page GDPR / DSA / LSSI dossier, bilingual, sold and delivered to a paying client.">
+            Dossier RGPD / DSA / LSSI de 54 páginas, bilingüe, vendido y entregado a un cliente que pagó.
+          </div>
+          <div class="fit__ref">EXP. 007</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Scripting and data handling">Scripting y manejo de datos</div>
+          <div class="fit__ev" data-en="A lead engine in Python with source parsing and deduplication; SQL and Excel before that.">
+            Motor de leads en Python con parseo de fuentes y deduplicación; antes, SQL y Excel avanzado.
+          </div>
+          <div class="fit__ref">EXP. 006</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Technical judgement">Criterio técnico</div>
+          <div class="fit__ev" data-en="Reverse-engineered a Tizen 2.3 TV: signed packages installed, apps opened through the local API.">
+            Ingeniería inversa en una tele con Tizen 2.3: paquetes firmados instalados y apps abiertas por la API local.
+          </div>
+          <div class="fit__ref">EXP. 003</div>
+        </div>
+        <div class="fit__row">
+          <div class="fit__req" data-en="Professional English">Inglés profesional</div>
+          <div class="fit__ev" data-en="B2/C1, used daily; bilingual portfolio and bilingual client documents.">
+            B2/C1, uso diario; portfolio bilingüe y documentos de cliente en dos idiomas.
+          </div>
+          <div class="fit__ref fit__ref--none">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRAYECTORIA ===================== -->
+  <section class="section" id="trayectoria">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">04</span>
+        <div>
+          <p class="label label--accent" data-en="Track record">Trayectoria</p>
+          <h2 class="sec-head__title" data-en="Where the <em>numbers</em> come from">De dónde salen los <em>números</em></h2>
+        </div>
+      </header>
+
+      <div class="tl reveal">
+        <div class="tl__item">
+          <div class="tl__when"><b data-en="2025 — now">2025 — hoy</b><span data-en="Málaga">Málaga</span></div>
+          <div class="tl__what">
+            <p class="org">VIBA Agency</p>
+            <h3 data-en="Co-founder">Cofundador</h3>
+            <p data-en="Influencer representation agency I co-founded and built: business model, website and brand, brand negotiation and commercial operation.">
+              Agencia de representación de talento digital que cofundé y construí: modelo de negocio, web y marca, negociación con marcas y operación comercial.
+            </p>
+            <div class="tl__tags"><span data-en="B2B">B2B</span><span data-en="Negotiation">Negociación</span><span data-en="Brand">Marca</span><span data-en="Contracts">Contratos</span></div>
+          </div>
+        </div>
+
+        <div class="tl__item">
+          <div class="tl__when"><b data-en="Nov 2025 — May 2026">Nov 2025 — May 2026</b><span>Málaga</span></div>
+          <div class="tl__what">
+            <p class="org">The HEINEKEN Company</p>
+            <h3 data-en="Sales Operations &amp; Data Analysis">Sales Operations &amp; Data Analysis</h3>
+            <p data-en="Daily reporting, Power BI dashboards, SAP reconciliation and delivery-route optimisation — 5 to 7 routes cut. Built the AI agent for route planners that the whole team ended up using.">
+              Reporting diario, cuadros de mando en Power BI, conciliación con SAP y optimización de rutas de reparto — 5 a 7 rutas recortadas. Construí el agente de IA para ruteros que acabó usando todo el equipo.
+            </p>
+            <div class="tl__tags"><span>Power BI</span><span>SAP</span><span>Excel</span><span data-en="Route planning">Rutas</span><span data-en="AI agent">Agente IA</span></div>
+          </div>
+        </div>
+
+        <div class="tl__item">
+          <div class="tl__when"><b data-en="2025 — now">2025 — hoy</b><span data-en="Own projects">Proyectos propios</span></div>
+          <div class="tl__what">
+            <p class="org" data-en="After · Klik · Tizen · Automation">After · Klik · Tizen · Automatización</p>
+            <h3 data-en="Build, launch, measure">Construir, lanzar, medir</h3>
+            <p data-en="Product, traffic and automation projects built on my own time, with the tools I choose: opencode, WorkBuddy and GitHub Copilot as a development team.">
+              Proyectos de producto, tráfico y automatización construidos en mi tiempo, con las herramientas que elijo: opencode, WorkBuddy y GitHub Copilot como equipo de desarrollo.
+            </p>
+            <div class="tl__tags"><span>opencode</span><span>WorkBuddy</span><span>GitHub Copilot</span><span>Make</span><span>Python</span></div>
+          </div>
+        </div>
+
+        <div class="tl__item">
+          <div class="tl__when"><b data-en="2021 — 2027">2021 — 2027</b><span>UMA</span></div>
+          <div class="tl__what">
+            <p class="org" data-en="University of Málaga">Universidad de Málaga</p>
+            <h3 data-en="Double degree: Business Administration + Law">Doble grado: ADE + Derecho</h3>
+            <p data-en="Final year, finishing around July 2027. Honours in Constitutional Law and Marketing Foundations. Strategy, finance, accounting, commercial law and taxation.">
+              Último curso, fin previsto en julio de 2027. Matrícula de Honor en Derecho Constitucional y Fundamentos de Marketing. Estrategia, finanzas, contabilidad, derecho mercantil y fiscal.
+            </p>
+            <div class="tl__tags"><span data-en="Honours ×2">Matrícula de Honor ×2</span><span data-en="GPA ~7.2">Nota ~7,2</span><span data-en="Bachibac FR/ES">Bachibac FR/ES</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MÉTODO ===================== -->
+  <section class="section" id="metodo">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-head__num">05</span>
+        <div>
+          <p class="label label--accent" data-en="How I work">Cómo trabajo</p>
+          <h2 class="sec-head__title" data-en="Four rules I actually <em>follow</em>">Cuatro reglas que <em>cumplo</em></h2>
+        </div>
+      </header>
+
+      <div class="method reveal">
+        <div class="method__item">
+          <span class="method__n">01</span>
+          <h3 data-en="The number first, the slide later">Primero el número, luego la diapositiva</h3>
+          <p data-en="Nothing goes into this portfolio without a metric that supports it. If I cannot measure it, I do not claim it.">
+            Nada entra en este portfolio sin una métrica que lo sostenga. Si no puedo medirlo, no lo afirmo.
+          </p>
+        </div>
+        <div class="method__item">
+          <span class="method__n">02</span>
+          <h3 data-en="Automate before you hire">Automatiza antes de contratar</h3>
+          <p data-en="A task repeated three times becomes a flow. That is how one person runs seven projects and still has Fridays free.">
+            Una tarea repetida tres veces se convierte en un flujo. Así una sola persona lleva siete proyectos y aún tiene los viernes libres.
+          </p>
+        </div>
+        <div class="method__item">
+          <span class="method__n">03</span>
+          <h3 data-en="I build with agents, I decide myself">Construyo con agentes, decido yo</h3>
+          <p data-en="opencode, WorkBuddy and GitHub Copilot write a lot of the code. I define the problem, review every line that matters and answer for the result.">
+            opencode, WorkBuddy y GitHub Copilot escriben buena parte del código. Yo defino el problema, reviso cada línea que importa y respondo del resultado.
+          </p>
+        </div>
+        <div class="method__item">
+          <span class="method__n">04</span>
+          <h3 data-en="I translate between business, law and tech">Traduzco entre negocio, derecho y tecnología</h3>
+          <p data-en="I can sit at the same table with a CFO, a lawyer and a developer and leave with a decision. That mix is what the double degree buys, and what keeps a project from dying in a slide deck.">
+            Me siento en la misma mesa con un CFO, un abogado y un developer y salgo con una decisión. Esa mezcla es lo que trae el doble grado, y lo que evita que un proyecto se quede en la diapositiva.
+          </p>
+        </div>
+      </div>
+
+      <div class="pull reveal">
+        <p class="label" data-en="Position">Posición</p>
+        <blockquote data-en="I am not looking for a role where AI is the decoration. I want the automation to <em>be</em> the job.">
+          No busco un puesto donde la IA sea el adorno. Quiero que la automatización <em>sea</em> el trabajo.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <p class="label label--accent" data-en="Contact · open to offers">Contacto · abierto a ofertas</p>
+      <h2 data-en="<em>Shall we talk?</em>"><em>¿Hablamos?</em></h2>
+
+      <a class="contact__mail" href="mailto:ricardovelascosedeno@gmail.com">ricardovelascosedeno@gmail.com</a>
+
+      <div class="contact__grid">
+        <p class="lead" data-en="I am looking for a remote role where AI and automation are the work itself: RevOps, BI, AI operations, legal-tech. I answer the same day, in Spanish or English.">
+          Busco un puesto en remoto donde la IA y la automatización sean el trabajo en sí: RevOps, BI, operaciones con IA, legal-tech. Respondo el mismo día, en español o en inglés.
+        </p>
+
+        <div class="contact__list">
+          <a href="tel:+34645312621"><span class="k" data-en="Phone">Teléfono</span><span class="v">+34 645 312 621</span></a>
+          <a href="https://www.linkedin.com/in/ricardo-daniel-velasco-sede%C3%B1o-897676269" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">/in/ricardo-velasco ↗</span></a>
+          <a href="https://github.com/afterappspain-ui" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">/afterappspain-ui ↗</span></a>
+          <div><span class="k" data-en="Base">Base</span><span class="v" data-en="Málaga, Spain · CET">Málaga, España · CET</span></div>
+          <div><span class="k" data-en="Status">Estado</span><span class="v" data-en="Available now · full-time">Disponible ya · jornada completa</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <p data-en="Colophon — Set in Instrument Serif, Instrument Sans and JetBrains Mono. HTML and CSS written by hand: no framework, no template. Data verified October 2026.">
+        Colofón — Compuesto en Instrument Serif, Instrument Sans y JetBrains Mono. HTML y CSS escritos a mano: sin framework y sin plantilla. Datos verificados en octubre de 2026.
+      </p>
+      <p>© 2026 Ricardo Daniel Velasco Sedeño · Málaga</p>
+      <p><a href="#inicio" data-en="Back to top ↑">Volver arriba ↑</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
